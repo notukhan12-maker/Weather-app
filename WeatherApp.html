@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Weather.css">
+</head>
+<body>
+    <div class="card">
+            <div class="search-bar">
+                    <input type="text" id="search-box" placeholder="Enter city name">
+                    <button id="search-icon"><i class="fa-brands fa-sistrix" style="color: white;" ></i></button>
+            </div>
+
+            <div class="error">
+                <h1>invalid city name</h1>
+            </div>
+            <div class="weather">
+                    <div class="icons">
+                        <div class="rain">
+                            <img src="https://cdn-icons-png.flaticon.com/128/4735/4735072.png" alt="rain" class="weatherIcon">
+                            <h1 class="temp">45°c</h1>
+                            <h1 class="city">Peshawar</h1>
+                        </div>
+                </div>
+                <div class="box">
+                    <div class="child1 same">
+                        <p>Humadity</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTrCXLndoa6aRlT40fDKa7omMyLuWLFrbUxCdS3KdiMg&s=10" alt="humadity">  
+                        
+                        <p class="humadity">27%</p>
+                        
+                    </div>
+                    <div class="child2  same">
+                        <p>wind-speed</p>
+                        <img src="data:image/png;base64,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" alt="wind">  
+                        <p class="wind">12 km/hr</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
